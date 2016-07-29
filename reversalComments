@@ -1,0 +1,26 @@
+import java.util.Scanner; //Scanner used to capture user input later
+
+public class reversal {
+
+	public static void main(String[] args) {
+		
+		//declare variables so they can be used later
+		int number = 0;
+		int reverseNumber = 0;
+		//User input prompt
+		System.out.println("Enter a number and press Enter:");
+		
+		Scanner in = new Scanner(System.in);
+		
+		number = in.nextInt(); //number will now = whatever the user enters
+		
+		while( number != 0) {
+			reverseNumber = reverseNumber * 10;
+			reverseNumber = reverseNumber + number%10;
+			number = number/10;	
+		} //Rinse and Repeat using these new values
+		
+		System.out.println("The reverse of the number you entered is: " + reverseNumber);
+	}
+
+}
